@@ -1,4 +1,4 @@
-import { Center, Icon, Text } from 'native-base'
+import { Center, Icon, Text, View } from 'native-base'
 import { Fontisto } from '@expo/vector-icons'
 
 import Logo from '../assets/logo.svg'
@@ -9,7 +9,7 @@ export function SignIn() {
   const { signIn } = useAuth()
 
   return (
-    <Center flex={1} bgColor="gray.900" p={7}>
+    <Center flex={1} bg="gray.900" p={7}>
       <Logo width={212} height={40} />
       <Button
         title="ENTRAR COM O GOOGLE"
