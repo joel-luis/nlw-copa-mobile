@@ -7,7 +7,7 @@ import { Base } from '../components/Base'
 import { useAuth } from '../contexts/AuthContext'
 
 export function SignIn() {
-  const { signIn } = useAuth()
+  const { signIn, isUserLoading } = useAuth()
 
   return (
     <Base>
@@ -21,6 +21,8 @@ export function SignIn() {
           type="SECONDARY"
           mt={12}
           onPress={signIn}
+          isLoading={isUserLoading}
+          _loading={{ _spinner: { color: 'white' } }}
         />
         <Text color="white" textAlign="center" mt={4}>
           Não utilizamos nenhuma informação além {'\n'} do seu e-mail para
