@@ -69,10 +69,15 @@ export function Pools() {
         <FlatList
           data={pools}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => <PoolCard data={item} />}
+          renderItem={({ item }) => (
+            <PoolCard
+              data={item}
+              onPress={() => navigate('details', { id: item.id })}
+            />
+          )}
           showsVerticalScrollIndicator={false}
           ListEmptyComponent={() => <EmptyPoolList />}
-          _contentContainerStyle={{ pb: 10 }}
+          _contentContainerStyle={{ pb: 90 }}
           px={5}
         />
       )}
