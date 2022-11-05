@@ -8,6 +8,7 @@ import { api } from '../services/api'
 import {
   Base,
   EmptyMyPoolList,
+  Guesses,
   Header,
   Loading,
   Option,
@@ -84,6 +85,7 @@ export function Details() {
               onPress={() => setOptionSelected('ranking')}
             />
           </HStack>
+          <Guesses poolId={poolDetails.id} />
         </VStack>
       ) : (
         <EmptyMyPoolList code={poolDetails.code} />
