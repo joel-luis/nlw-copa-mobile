@@ -1,9 +1,6 @@
 import { Heading, VStack } from 'native-base'
 
-import { Base } from '../components/Base'
-import { Button } from '../components/Button'
-import { Header } from '../components/Header'
-import { Input } from '../components/Input'
+import { Base, Button, Header, Input } from '../components/@index'
 
 export function Find() {
   return (
